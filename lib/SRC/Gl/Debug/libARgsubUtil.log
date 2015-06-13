@@ -1,0 +1,12 @@
+﻿Build started 30/05/2015 12:06:32.
+     1>Project "C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\libARgsubUtil.vcxproj" on node 4 (Rebuild target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (libARgsub.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _VC80_UPGRADE=0x0710 /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TC /analyze- /errorReport:prompt gsubUtil.c
+         gsubUtil.c
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\gl\gsubutil.c : fatal error C1041: cannot open program database 'c:\users\taschetto\desktop\artoolkitcb\lib\src\gl\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+     1>Done Building Project "C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\libARgsubUtil.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.58

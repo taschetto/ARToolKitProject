@@ -1,0 +1,17 @@
+﻿Build started 30/05/2015 12:06:32.
+     1>Project "C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\libARgsub.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _VC80_UPGRADE=0x0710 /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TC /analyze- /errorReport:prompt gsub.c
+         gsub.c
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1354,5): warning MSB8012: TargetPath(C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\Debug\libARgsub.lib) does not match the Library's OutputFile property value (C:\Users\taschetto\Desktop\ARToolKitCB\lib\libARgsubd.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1356,5): warning MSB8012: TargetName(libARgsub) does not match the Library's OutputFile property value (libARgsubd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\..\..\libARgsubd.lib" /NOLOGO Debug\gsub.obj
+         libARgsub.vcxproj -> C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\Debug\libARgsub.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"Debug\libARgsub.bsc" Debug\gsub.sbr
+     1>Done Building Project "C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\libARgsub.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.72

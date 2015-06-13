@@ -1,0 +1,23 @@
+﻿Build started 30/05/2015 12:06:34.
+     1>Project "C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\libARgsub_lite.vcxproj" on node 2 (Rebuild target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\taschetto\desktop\artoolkitcb\lib\src\gl\debug\vc120.idb' because it is being used by another process.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\taschetto\desktop\artoolkitcb\lib\src\gl\debug\vc120.pdb' because it is being used by another process.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\taschetto\desktop\artoolkitcb\lib\src\gl\debug\gsub.sbr' because it is being used by another process.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (libARgsub.vcxproj, libARgsubUtil.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _VC80_UPGRADE=0x0710 /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TC /analyze- /errorReport:prompt gsub_lite.c
+         gsub_lite.c
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\gl\gsub_lite.c(678): warning C4090: 'function' : different 'const' qualifiers
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\gl\gsub_lite.c(737): warning C4090: 'function' : different 'const' qualifiers
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1354,5): warning MSB8012: TargetPath(C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\Debug\libARgsub_lite.lib) does not match the Library's OutputFile property value (C:\Users\taschetto\Desktop\ARToolKitCB\lib\libARgsub_lited.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1356,5): warning MSB8012: TargetName(libARgsub_lite) does not match the Library's OutputFile property value (libARgsub_lited). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\..\..\libARgsub_lited.lib" /NOLOGO Debug\gsub_lite.obj
+         libARgsub_lite.vcxproj -> C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\Debug\libARgsub_lite.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"Debug\libARgsub_lite.bsc" Debug\gsub_lite.sbr
+     1>Done Building Project "C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\Gl\libARgsub_lite.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.56

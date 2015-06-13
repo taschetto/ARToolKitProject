@@ -1,0 +1,116 @@
+﻿Build started 30/05/2015 12:06:31.
+     1>Project "C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\AR\libAR.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\AR\../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _VC80_UPGRADE=0x0710 /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TC /analyze- /errorReport:prompt arDetectMarker.c arDetectMarker2.c arGetCode.c arGetMarkerInfo.c arGetTransMat.c arGetTransMat2.c arGetTransMat3.c arGetTransMatCont.c arLabeling.c arUtil.c mAlloc.c mAllocDup.c mAllocInv.c mAllocMul.c mAllocTrans.c mAllocUnit.c mDet.c mDisp.c mDup.c mFree.c mInv.c mMul.c mPCA.c mSelfInv.c mTrans.c mUnit.c paramChangeSize.c paramDecomp.c paramDisp.c paramDistortion.c paramFile.c paramGet.c vAlloc.c vDisp.c vFree.c vHouse.c vInnerP.c vTridiag.c
+         arDetectMarker.c
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\ardetectmarker.c(37): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+         arDetectMarker2.c
+         arGetCode.c
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\argetcode.c(61): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\argetcode.c(71): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(230) : see declaration of 'fscanf'
+         arGetMarkerInfo.c
+         arGetTransMat.c
+         arGetTransMat2.c
+         arGetTransMat3.c
+         arGetTransMatCont.c
+         arLabeling.c
+         arUtil.c
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\arutil.c(47): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\arutil.c(258): warning C4996: '_ftime64': This function or variable may be unsafe. Consider using _ftime64_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\sys\timeb.h(131) : see declaration of '_ftime64'
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\arutil.c(259): warning C4244: '=' : conversion from '__time64_t' to 'int', possible loss of data
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\arutil.c(285): warning C4996: '_ftime64': This function or variable may be unsafe. Consider using _ftime64_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\sys\timeb.h(131) : see declaration of '_ftime64'
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\arutil.c(286): warning C4244: '=' : conversion from '__time64_t' to 'int', possible loss of data
+         mAlloc.c
+         mAllocDup.c
+         mAllocInv.c
+         mAllocMul.c
+         mAllocTrans.c
+         mAllocUnit.c
+         mDet.c
+         mDisp.c
+         mDup.c
+         mFree.c
+         Generating Code...
+         Compiling...
+         mInv.c
+         mMul.c
+         mPCA.c
+         mSelfInv.c
+         mTrans.c
+         mUnit.c
+         paramChangeSize.c
+         paramDecomp.c
+         paramDisp.c
+         paramDistortion.c
+         paramFile.c
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\paramfile.c(112): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\paramfile.c(161): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\paramfile.c(193): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>c:\users\taschetto\desktop\artoolkitcb\lib\src\ar\paramfile.c(219): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+         paramGet.c
+         vAlloc.c
+         vDisp.c
+         vFree.c
+         vHouse.c
+         vInnerP.c
+         vTridiag.c
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1354,5): warning MSB8012: TargetPath(C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\AR\Debug\libAR.lib) does not match the Library's OutputFile property value (C:\Users\taschetto\Desktop\ARToolKitCB\lib\libARd.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1356,5): warning MSB8012: TargetName(libAR) does not match the Library's OutputFile property value (libARd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\AR\..\..\libARd.lib" /NOLOGO Debug\arDetectMarker.obj
+         Debug\arDetectMarker2.obj
+         Debug\arGetCode.obj
+         Debug\arGetMarkerInfo.obj
+         Debug\arGetTransMat.obj
+         Debug\arGetTransMat2.obj
+         Debug\arGetTransMat3.obj
+         Debug\arGetTransMatCont.obj
+         Debug\arLabeling.obj
+         Debug\arUtil.obj
+         Debug\mAlloc.obj
+         Debug\mAllocDup.obj
+         Debug\mAllocInv.obj
+         Debug\mAllocMul.obj
+         Debug\mAllocTrans.obj
+         Debug\mAllocUnit.obj
+         Debug\mDet.obj
+         Debug\mDisp.obj
+         Debug\mDup.obj
+         Debug\mFree.obj
+         Debug\mInv.obj
+         Debug\mMul.obj
+         Debug\mPCA.obj
+         Debug\mSelfInv.obj
+         Debug\mTrans.obj
+         Debug\mUnit.obj
+         Debug\paramChangeSize.obj
+         Debug\paramDecomp.obj
+         Debug\paramDisp.obj
+         Debug\paramDistortion.obj
+         Debug\paramFile.obj
+         Debug\paramGet.obj
+         Debug\vAlloc.obj
+         Debug\vDisp.obj
+         Debug\vFree.obj
+         Debug\vHouse.obj
+         Debug\vInnerP.obj
+         Debug\vTridiag.obj
+         libAR.vcxproj -> C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\AR\Debug\libAR.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"Debug\libAR.bsc" Debug\arDetectMarker.sbr Debug\arDetectMarker2.sbr Debug\arGetCode.sbr Debug\arGetMarkerInfo.sbr Debug\arGetTransMat.sbr Debug\arGetTransMat2.sbr Debug\arGetTransMat3.sbr Debug\arGetTransMatCont.sbr Debug\arLabeling.sbr Debug\arUtil.sbr Debug\mAlloc.sbr Debug\mAllocDup.sbr Debug\mAllocInv.sbr Debug\mAllocMul.sbr Debug\mAllocTrans.sbr Debug\mAllocUnit.sbr Debug\mDet.sbr Debug\mDisp.sbr Debug\mDup.sbr Debug\mFree.sbr Debug\mInv.sbr Debug\mMul.sbr Debug\mPCA.sbr Debug\mSelfInv.sbr Debug\mTrans.sbr Debug\mUnit.sbr Debug\paramChangeSize.sbr Debug\paramDecomp.sbr Debug\paramDisp.sbr Debug\paramDistortion.sbr Debug\paramFile.sbr Debug\paramGet.sbr Debug\vAlloc.sbr Debug\vDisp.sbr Debug\vFree.sbr Debug\vHouse.sbr Debug\vInnerP.sbr Debug\vTridiag.sbr
+     1>Done Building Project "C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\AR\libAR.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:23.92

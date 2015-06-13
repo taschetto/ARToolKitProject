@@ -1,0 +1,18 @@
+﻿Build started 30/05/2015 12:06:36.
+     1>Project "C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\libARvideo.vcxproj" on node 4 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\..\..\..\include /IC:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\..\..\..\DSVL\src /Zi /nologo /W1 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LIBARVIDEO_EXPORTS /D _VC80_UPGRADE=0x0710 /D _WINDLL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt videoWin32DirectShow.cpp
+         videoWin32DirectShow.cpp
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1186,5): warning MSB8012: TargetPath(C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\Debug\libARvideo.dll) does not match the Linker's OutputFile property value (C:\Users\taschetto\Desktop\ARToolKitCB\bin\libARvideod.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1188,5): warning MSB8012: TargetName(libARvideo) does not match the Linker's OutputFile property value (libARvideod). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\..\..\..\bin\libARvideod.dll" /NOLOGO /LIBPATH:C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\..\..\..\DSVL\lib\ DSVLd.lib comsupp.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\libARvideo.pdb" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\..\..\libARvideod.lib" /MACHINE:X86 /SAFESEH /DLL Debug\videoWin32DirectShow.obj
+            Creating library C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\..\..\libARvideod.lib and object C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\..\..\libARvideod.exp
+         libARvideo.vcxproj -> C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\Debug\libARvideo.dll
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"Debug\libARvideo.bsc" Debug\videoWin32DirectShow.sbr
+     1>Done Building Project "C:\Users\taschetto\Desktop\ARToolKitCB\lib\SRC\VideoWin32DirectShow\libARvideo.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:14.21

@@ -1,13 +1,11 @@
 # depslib dependency file v1.0
-1434225194 source:c:\users\taschetto\documents\github\artoolkitproject\main.c
+1434228528 source:c:\users\taschetto\documents\github\artoolkitproject\main.c
 	<windows.h>
 	<VideoIM.h>
 	<stdio.h>
 	<stdlib.h>
 	<GL/gl.h>
 	<GL/glut.h>
-	<OpenGL/gl.h>
-	<GLUT/glut.h>
 	<AR/gsub.h>
 	<AR/video.h>
 	<AR/param.h>

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1434214304 source:c:\users\taschetto\documents\github\artoolkitproject\main.c
+1434225194 source:c:\users\taschetto\documents\github\artoolkitproject\main.c
 	<windows.h>
 	<VideoIM.h>
 	<stdio.h>
@@ -14,34 +14,34 @@
 	<AR/ar.h>
 	<float.h>
 
-1432993693 c:\users\taschetto\documents\github\artoolkitproject\include\videoim.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\videoim.h
 	"im_capture.h"
 
-1432993693 c:\users\taschetto\documents\github\artoolkitproject\include\im_capture.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\im_capture.h
 
-1432993695 c:\users\taschetto\documents\github\artoolkitproject\include\gl\glut.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\gl\glut.h
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\gsub.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\gsub.h
 	<AR/config.h>
 	<AR/param.h>
 	<AR/ar.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\config.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\config.h
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\param.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\param.h
 	<AR/config.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\ar.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\ar.h
 	<stdio.h>
 	<malloc.h>
 	<stdlib.h>
 	<AR/config.h>
 	<AR/param.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\video.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\video.h
 	<AR/config.h>
 	<AR/ar.h>
 	<AR/sys/videoWin32DirectShow.h>
@@ -52,20 +52,20 @@
 	<AR/sys/videoSGI.h>
 	<AR/sys/videoMacOSX.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videowin32directshow.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videowin32directshow.h
 	<AR/config.h>
 	<AR/ar.h>
 	<stdio.h>
 	<string.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videolinuxv4l.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videolinuxv4l.h
 	<stdlib.h>
 	<linux/types.h>
 	<linux/videodev.h>
 	<AR/config.h>
 	<AR/ar.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videolinuxdv.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videolinuxdv.h
 	<AR/config.h>
 	<AR/ar.h>
 	<stdio.h>
@@ -74,7 +74,7 @@
 	<libraw1394/raw1394.h>
 	<libdv/dv.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videolinux1394cam.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videolinux1394cam.h
 	<AR/config.h>
 	<AR/ar.h>
 	<stdlib.h>
@@ -83,13 +83,13 @@
 	<libraw1394/raw1394.h>
 	<libdc1394/dc1394_control.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videogstreamer.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videogstreamer.h
 	<AR/config.h>
 	<AR/ar.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videosgi.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videosgi.h
 	<AR/config.h>
 	<AR/ar.h>
 
-1432993694 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videomacosx.h
+1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videomacosx.h
 

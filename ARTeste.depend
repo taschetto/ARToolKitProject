@@ -91,3 +91,95 @@
 
 1434225191 c:\users\taschetto\documents\github\artoolkitproject\include\ar\sys\videomacosx.h
 
+1434487167 source:c:\users\12180247\artoolkitproject\main.c
+	<windows.h>
+	<VideoIM.h>
+	<stdio.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<AR/gsub.h>
+	<AR/video.h>
+	<AR/param.h>
+	<AR/ar.h>
+	<float.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\videoim.h
+	"im_capture.h"
+
+1434487166 c:\users\12180247\artoolkitproject\include\im_capture.h
+
+1434487166 c:\users\12180247\artoolkitproject\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\gsub.h
+	<AR/config.h>
+	<AR/param.h>
+	<AR/ar.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\config.h
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\param.h
+	<AR/config.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\ar.h
+	<stdio.h>
+	<malloc.h>
+	<stdlib.h>
+	<AR/config.h>
+	<AR/param.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\video.h
+	<AR/config.h>
+	<AR/ar.h>
+	<AR/sys/videoWin32DirectShow.h>
+	<AR/sys/videoLinuxV4L.h>
+	<AR/sys/videoLinuxDV.h>
+	<AR/sys/videoLinux1394Cam.h>
+	<AR/sys/videoGStreamer.h>
+	<AR/sys/videoSGI.h>
+	<AR/sys/videoMacOSX.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\sys\videowin32directshow.h
+	<AR/config.h>
+	<AR/ar.h>
+	<stdio.h>
+	<string.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\sys\videolinuxv4l.h
+	<stdlib.h>
+	<linux/types.h>
+	<linux/videodev.h>
+	<AR/config.h>
+	<AR/ar.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\sys\videolinuxdv.h
+	<AR/config.h>
+	<AR/ar.h>
+	<stdio.h>
+	<string.h>
+	<unistd.h>
+	<libraw1394/raw1394.h>
+	<libdv/dv.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\sys\videolinux1394cam.h
+	<AR/config.h>
+	<AR/ar.h>
+	<stdlib.h>
+	<linux/types.h>
+	<linux/videodev.h>
+	<libraw1394/raw1394.h>
+	<libdc1394/dc1394_control.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\sys\videogstreamer.h
+	<AR/config.h>
+	<AR/ar.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\sys\videosgi.h
+	<AR/config.h>
+	<AR/ar.h>
+
+1434487166 c:\users\12180247\artoolkitproject\include\ar\sys\videomacosx.h
+

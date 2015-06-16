@@ -33,10 +33,10 @@ int count = 0;
 char *cparam_name    = "Data/camera_para.dat";
 ARParam cparam;
 
-char *patt_name[PATTERN_COUNT] = { "Data/multi/a.pat", "Data/multi/b.pat",
-                                   "Data/multi/c.pat", "Data/multi/d.pat",
-                                   "Data/multi/e.pat", "Data/multi/g.pat",
-                                   "Data/multi/k.pat", "Data/multi/l.pat" };
+char *patt_name[PATTERN_COUNT] = { "Data/multi/marker_a.pat", "Data/multi/marker_b.pat",
+                                   "Data/multi/marker_c.pat", "Data/multi/marker_d.pat",
+                                   "Data/multi/marker_e.pat", "Data/multi/marker_g.pat",
+                                   "Data/multi/marker_k.pat", "Data/multi/marker_l.pat" };
 int patt_id;
 int hide_buildings = 0;
 int hide_road = 0;

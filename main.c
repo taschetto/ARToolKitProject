@@ -161,9 +161,19 @@ static void mainLoop(void)
 
   if (marker_num > 0)
   {
-    // Sempre desenha em relação ao primeiro marcador que encontrar
-    draw(&marker_info[0]);
-    printf("Referencia: %s\n", patt_name[marker_info[0].id]);
+    // Sempre desenha em relação ao marcador com maior confiabilidade
+    double cf = 0.0;
+
+    for (j = 0; j < marker_num; j++)
+    {
+      if (marker_info[j].cf > cf)
+      {
+        cf = marker_info[j].cf;
+        k = j;
+      }
+    }
+    draw(&marker_info[k]);
+    printf("Referencia: %s\n", patt_name[marker_info[k].id]);
   }
 
   argSwapBuffers();
@@ -223,8 +233,12 @@ static void draw_buildings(double* gl_para, int marker)
     {0.0, 2.0, 1.0, 1.0}, {0.0, 2.0, 2.0, 1.0}, {2.0, 1.0, 1.0, 1.0}
   };
 
-  GLfloat height[] = { 100.0, 100.0, 100.0,
-                       100.0, 100.0, 100.0 };
+  GLfloat dim[BUILDING_COUNT][3] = { { 120.0, 100.0, 315.0 },
+                                     { 130.0, 110.0, 330.0 },
+                                     { 100.0, 100.0, 230.0 },
+                                     {  90.0,  90.0, 350.0 },
+                                     { 100.0,  65.0, 250.0 },
+                                     { 100.0, 100.0, 100.0 } };
 
   int building = 0;
   for (; building < BUILDING_COUNT; building++)
@@ -232,9 +246,9 @@ static void draw_buildings(double* gl_para, int marker)
     glLoadMatrixd(gl_para);
     glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient[building]);
     glMatrixMode(GL_MODELVIEW);
-    glTranslatef(mat_trans[marker][building][0], mat_trans[marker][building][1], height[building]);
-    glScalef(1.0, 1.0, 2.0);
-    glutSolidCube(height[building]);
+    glTranslatef(mat_trans[marker][building][0], mat_trans[marker][building][1], dim[building][2] / 2);
+    glScalef(dim[building][0] / 100.0, dim[building][1] / 100.0, dim[building][2] / 100.0);
+    glutSolidCube(100.0);
   }
 }
 

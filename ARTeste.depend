@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1434228528 source:c:\users\taschetto\documents\github\artoolkitproject\main.c
+1434888959 source:c:\users\taschetto\documents\github\artoolkitproject\main.c
 	<windows.h>
 	<VideoIM.h>
 	<stdio.h>

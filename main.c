@@ -19,12 +19,24 @@ static void draw_buildings(double*, int);
 static void draw_road(double*, int);
 static void draw_car(double*, int, int);
 
-#define PATTERNS 8
+#define PATTERNS  8
 #define BUILDINGS 6
-#define CARS 2
+#define CARS      2
+#define VERTEXES  4
 
-#define CAR_1 0
-#define CAR_2 1
+#define CAR_1     0
+#define CAR_2     1
+
+#define X         0
+#define Y         1
+
+#define BEGIN     0
+#define END       1
+
+#define WIDTH     0
+#define LENGTH    1
+#define HEIGHT    2
+#define NORM      100.0
 
 char *vconf = "Data\\WDM_camera_flipV.xml";
 
@@ -65,7 +77,7 @@ GLfloat dim[BUILDINGS][3] =
   { 100.0, 100.0, 100.0 }
 };
 
-GLfloat vertexes[PATTERNS][4][2] =
+GLfloat vertexes[PATTERNS][VERTEXES][2] =
 {
   {{    0.0, -60.0 }, {    0.0, -180.0 }, { 780.0, -180.0 }, { 780.0, -60.0 }},
   {{ -160.0, -60.0 }, { -160.0, -180.0 }, { 620.0, -180.0 }, { 620.0, -60.0 }},
@@ -101,11 +113,7 @@ GLfloat car_colors[CARS][4] =
   {2.5, 0.0, 0.5, 1.0}
 };
 
-GLfloat car_posx[CARS] =
-{
-   FLT_MAX,
-  -FLT_MAX
-};
+GLfloat car_posx[CARS] = { FLT_MAX, -FLT_MAX };
 
 int main(int argc, char **argv)
 {
@@ -275,9 +283,9 @@ static void draw_buildings(double* gl_para, int marker)
     glLoadMatrixd(gl_para);
     glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient[building]);
     glMatrixMode(GL_MODELVIEW);
-    glTranslatef(mat_trans[marker][building][0], mat_trans[marker][building][1], dim[building][2] / 2);
-    glScalef(dim[building][0] / 100.0, dim[building][1] / 100.0, dim[building][2] / 100.0);
-    glutSolidCube(100.0);
+    glTranslatef(mat_trans[marker][building][X], mat_trans[marker][building][Y], dim[building][HEIGHT] / 2);
+    glScalef(dim[building][WIDTH] / NORM, dim[building][LENGTH] / NORM, dim[building][HEIGHT] / NORM);
+    glutSolidCube(NORM);
   }
 }
 
@@ -291,14 +299,14 @@ static void draw_road( double* gl_para, int marker )
 
   glBegin(GL_QUADS);
   int vertex = 0;
-  for (; vertex < 4; vertex++) glVertex3f(vertexes[marker][vertex][0], vertexes[marker][vertex][1], 0.0f);
+  for (; vertex < VERTEXES; vertex++) glVertex3f(vertexes[marker][vertex][X], vertexes[marker][vertex][Y], 0.0f);
   glEnd();
 }
 
 static void draw_car(double* gl_para, int marker, int car)
 {
-  if (car_posx[car] < limits[marker][0]) car_posx[car] = limits[marker][1];
-  if (car_posx[car] > limits[marker][1]) car_posx[car] = limits[marker][0];
+  if (car_posx[car] < limits[marker][BEGIN]) car_posx[car] = limits[marker][END];
+  if (car_posx[car] > limits[marker][END])   car_posx[car] = limits[marker][BEGIN];
   car_posx[car] += car_params[car][1];
 
   glLoadMatrixd(gl_para);

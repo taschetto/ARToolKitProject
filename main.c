@@ -17,12 +17,14 @@ static void mainLoop(void);
 static void draw(ARMarkerInfo*);
 static void draw_buildings(double*, int);
 static void draw_road(double*, int);
-static void draw_car1(double*, int);
-static void draw_car2(double*, int);
+static void draw_car(double*, int, int);
 
-#define PATTERN_COUNT 8
-#define BUILDING_COUNT 6
-#define CAR_COUNT 2
+#define PATTERNS 8
+#define BUILDINGS 6
+#define CARS 2
+
+#define CAR_1 0
+#define CAR_2 1
 
 char *vconf = "Data\\WDM_camera_flipV.xml";
 
@@ -33,15 +35,15 @@ int count = 0;
 char *cparam_name    = "Data/camera_para.dat";
 ARParam cparam;
 
-char *patt_name[PATTERN_COUNT] = { "Data/multi/marker_a.pat", "Data/multi/marker_b.pat",
-                                   "Data/multi/marker_c.pat", "Data/multi/marker_d.pat",
-                                   "Data/multi/marker_e.pat", "Data/multi/marker_g.pat",
-                                   "Data/multi/marker_k.pat", "Data/multi/marker_l.pat" };
+char *patt_name[PATTERNS] = { "Data/multi/marker_a.pat", "Data/multi/marker_b.pat",
+                              "Data/multi/marker_c.pat", "Data/multi/marker_d.pat",
+                              "Data/multi/marker_e.pat", "Data/multi/marker_g.pat",
+                              "Data/multi/marker_k.pat", "Data/multi/marker_l.pat" };
 int patt_id;
 int hide_buildings = 0;
 int hide_road = 0;
 
-GLfloat mat_trans[PATTERN_COUNT][BUILDING_COUNT][2] =
+GLfloat mat_trans[PATTERNS][BUILDINGS][2] =
 {
   {{  315.0,    0.0 }, {  465.0,    0.0 }, { 850.0, -110.0 }, {  615.0, -230.0 }, {  170.0, -230.0 }, {  -70.0, -110.0 }},
   {{  155.0,    0.0 }, {  305.0,    0.0 }, { 690.0, -110.0 }, {  455.0, -230.0 }, {   10.0, -230.0 }, { -230.0, -110.0 }},
@@ -53,7 +55,17 @@ GLfloat mat_trans[PATTERN_COUNT][BUILDING_COUNT][2] =
   {{ -455.0,  240.0 }, { -305.0,  240.0 }, {  80.0,  130.0 }, { -155.0,   10.0 }, { -610.0,   10.0 }, { -840.0,  130.0 }}
 };
 
-GLfloat vertexes[PATTERN_COUNT][4][2] =
+GLfloat dim[BUILDINGS][3] =
+{
+  { 120.0, 100.0, 315.0 },
+  { 130.0, 110.0, 330.0 },
+  { 100.0, 100.0, 230.0 },
+  {  90.0,  90.0, 350.0 },
+  { 100.0,  65.0, 250.0 },
+  { 100.0, 100.0, 100.0 }
+};
+
+GLfloat vertexes[PATTERNS][4][2] =
 {
   {{    0.0, -60.0 }, {    0.0, -180.0 }, { 780.0, -180.0 }, { 780.0, -60.0 }},
   {{ -160.0, -60.0 }, { -160.0, -180.0 }, { 620.0, -180.0 }, { 620.0, -60.0 }},
@@ -65,11 +77,35 @@ GLfloat vertexes[PATTERN_COUNT][4][2] =
   {{ -770.0, 180.0 }, { -770.0,   60.0 }, {  10.0,   60.0 }, {  10.0, 180.0 }}
 };
 
-  GLfloat limits[CAR_COUNT][8][2] =
-  {
-    {{   0.0, 780.0 }, { -160.0, 620.0 }, { -615.0,  165.0 }, { -770.0,   10.0 }, {   0.0, 780.0 }, { -315.0,  465.0 }, { -465.0,  315.0 }, { -770.0,   10.0 }},
-    {{ 780.0,   0.0 }, {  620.0, -160.0 }, { 165.0, -615.0 }, {   10.0, -770.0 }, { 780.0,   0.0 }, {  465.0, -315.0 }, {  315.0, -465.0 }, {   10.0, -770.0 }}
-  };
+GLfloat car_params[CARS][3] =
+{
+  {  FLT_MAX,  15.0f,  -95.0 },
+  { -FLT_MAX, -30.0f, -140.0}
+};
+
+GLfloat limits[PATTERNS][2] =
+{
+  {    0.0, 780.0 },
+  { -160.0, 620.0 },
+  { -615.0, 165.0 },
+  { -770.0,  10.0 },
+  {    0.0, 780.0 },
+  { -315.0, 465.0 },
+  { -465.0, 315.0 },
+  { -770.0,  10.0 },
+};
+
+GLfloat car_colors[CARS][4] =
+{
+  {0.5, 1.5, 2.2, 1.0},
+  {2.5, 0.0, 0.5, 1.0}
+};
+
+GLfloat car_posx[CARS] =
+{
+   FLT_MAX,
+  -FLT_MAX
+};
 
 int main(int argc, char **argv)
 {
@@ -115,7 +151,7 @@ static void init( void )
   arParamDisp( &cparam );
 
   int i = 0;
-  for (i = 0; i < PATTERN_COUNT; i++)
+  for (i = 0; i < PATTERNS; i++)
   {
     if( (patt_id=arLoadPatt(patt_name[i])) < 0 )
     {
@@ -218,8 +254,8 @@ static void draw(ARMarkerInfo* marker_info)
     if (hide_buildings) glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);
 
     if (!hide_road) draw_road(gl_para, marker_info->id);
-    draw_car1(gl_para, marker_info->id);
-    draw_car2(gl_para, marker_info->id);
+    draw_car(gl_para, marker_info->id, CAR_1);
+    draw_car(gl_para, marker_info->id, CAR_2);
 
     glDisable(GL_LIGHTING);
     glDisable(GL_DEPTH_TEST);
@@ -227,21 +263,14 @@ static void draw(ARMarkerInfo* marker_info)
 
 static void draw_buildings(double* gl_para, int marker)
 {
-  GLfloat mat_ambient[BUILDING_COUNT][4] =
+  GLfloat mat_ambient[BUILDINGS][4] =
   {
     {0.0, 0.0, 2.0, 1.0}, {2.0, 2.0, 0.0, 1.0}, {1.0, 0.0, 1.0, 1.0},
     {0.0, 2.0, 1.0, 1.0}, {0.0, 2.0, 2.0, 1.0}, {2.0, 1.0, 1.0, 1.0}
   };
 
-  GLfloat dim[BUILDING_COUNT][3] = { { 120.0, 100.0, 315.0 },
-                                     { 130.0, 110.0, 330.0 },
-                                     { 100.0, 100.0, 230.0 },
-                                     {  90.0,  90.0, 350.0 },
-                                     { 100.0,  65.0, 250.0 },
-                                     { 100.0, 100.0, 100.0 } };
-
   int building = 0;
-  for (; building < BUILDING_COUNT; building++)
+  for (; building < BUILDINGS; building++)
   {
     glLoadMatrixd(gl_para);
     glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient[building]);
@@ -266,34 +295,16 @@ static void draw_road( double* gl_para, int marker )
   glEnd();
 }
 
-static void draw_car1(double* gl_para, int marker)
+static void draw_car(double* gl_para, int marker, int car)
 {
-  GLfloat mat_ambient[] = {0.5, 1.5, 2.2, 1.0};
-  static float x_pos = FLT_MAX;
-
-  if (x_pos > limits[0][marker][1]) x_pos = limits[0][marker][0];
-  x_pos += 15.0f;
+  if (car_posx[car] < limits[marker][0]) car_posx[car] = limits[marker][1];
+  if (car_posx[car] > limits[marker][1]) car_posx[car] = limits[marker][0];
+  car_posx[car] += car_params[car][1];
 
   glLoadMatrixd(gl_para);
-  glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
+  glMaterialfv(GL_FRONT, GL_AMBIENT, car_colors[car]);
   glMatrixMode(GL_MODELVIEW);
-  glTranslatef(x_pos , -95.0 + (marker > 3 ? 240 : 0), 25.0);
-  glScalef(2.0, 1.0, 1.0);
-  glutSolidCube(25.0);
-}
-
-static void draw_car2( double* gl_para, int marker )
-{
-  GLfloat mat_ambient[] = {2.5, 0.0, 0.5, 1.0};
-  static float x_pos = -FLT_MAX;
-
-  if (x_pos < limits[1][marker][1]) x_pos = limits[1][marker][0];
-  x_pos -= 30.0f;
-
-  glLoadMatrixd(gl_para);
-  glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
-  glMatrixMode(GL_MODELVIEW);
-  glTranslatef(x_pos , -140.0 + (marker > 3 ? 240 : 0), 25.0);
+  glTranslatef(car_posx[car], car_params[car][2] + (marker > 3 ? 240 : 0), 25.0);
   glScalef(2.0, 1.0, 1.0);
   glutSolidCube(25.0);
 }

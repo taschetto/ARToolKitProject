@@ -1,3 +1,15 @@
+/******************************************************************************
+
+  Pontifícia Universidade Católica do Rio Grande do Sul
+  Faculdade de Informática
+  Ciência da Computação
+  Computação Gráfica II
+
+  Alunos: Guilherme Taschetto
+          Pedro Vanzella
+
+******************************************************************************/
+
 #include <windows.h>
 #include <VideoIM.h>
 #include <stdio.h>
